@@ -9,7 +9,11 @@ var app = new Vue(
         methods: {
             getDischi() {
                 axios
-                    .get('http://localhost:8888/htdocs/php-ajax-dischi/vue-server/server.php')
+                    .get('http://localhost:8888/htdocs/php-ajax-dischi/vue-server/server.php',{
+                        params: {
+                            genre : this.genreChoosen
+                        }
+                    })
                     .then((response) => {
                         const result = response.data;
                         //Ora assegnamo tutti gl'oggetti al nostro array dischi
