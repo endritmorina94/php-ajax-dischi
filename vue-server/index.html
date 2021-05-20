@@ -23,12 +23,12 @@
 
             <div class="buttons">
 
-                <select class="" name="">
+                <select v-model="genreChoosen" class="" name="">
                     <option value="">All</option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
+                    <option value="rock">Rock</option>
+                    <option value="pop">Pop</option>
+                    <option value="jazz">Jazz</option>
+                    <option value="metal">Metal</option>
 
                 </select>
 
@@ -42,7 +42,7 @@
             <!-- Contenitore Album -->
             <section class="albums-container">
                 <!-- Single Album -->
-                <div v-for="(disco, index) in dischi" v-if="filterByGenre(index)" class="album">
+                <div v-for="disco in dischi" class="album">
 
                     <div class="album-content">
                         <div class="album-img">

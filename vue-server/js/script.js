@@ -7,18 +7,22 @@ var app = new Vue(
             genreChoosen: ""
         },
         methods: {
+            getDischi() {
+                axios
+                    .get('http://localhost:8888/htdocs/php-ajax-dischi/vue-server/server.php')
+                    .then((response) => {
+                        const result = response.data;
+                        //Ora assegnamo tutti gl'oggetti al nostro array dischi
+                        this.dischi = result;
+                    });
+            }
         },
         mounted() {
-            axios
-                .get('https://flynn.boolean.careers/exercises/api/array/music')
-                .then((response) => {
-                    const result = response.data;
 
-                    //Ora assegnamo tutti gl'oggetti al nostro array dischi
-                    this.dischi = result.response;
+            this.getDischi();
 
+            console.log(this.dischi);
 
-                });
         }
     }
 );
