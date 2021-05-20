@@ -34,7 +34,7 @@
 
                         <div class="album-content">
                             <div class="album-img">
-                                <img src="<?php echo $disco["poster"] ?>" alt="<?php echo $disco["titolo"] ?>">
+                                <img src="<?php echo $disco["poster"] ?>" alt="<?php echo $disco["title"] ?>">
                                 <div class="overlay">
                                     <i class="fas fa-play"></i>
                                 </div>
@@ -42,7 +42,7 @@
 
                             <div class="album-info">
                                 <div class="album-name">
-                                    <h4><?php echo $disco["titolo"] ?></h4>
+                                    <h4><?php echo $disco["title"] ?></h4>
                                 </div>
                                 <div class="album-author">
                                     <p class="author"><?php echo $disco["author"] ?></p>
